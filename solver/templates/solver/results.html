@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quadratic Solution Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .result-container {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 16px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        a:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Hello {{ name }}</h2>
+        <p><strong>Equation:</strong> {{ a }}x² + {{ b }}x + {{ c }} = 0</p>
+        <p><strong>{{ message }}</strong></p>
+        <p><strong>Root 1:</strong> {{ root1 }}</p>
+        {% if root2 %}
+            <p><strong>Root 2:</strong> {{ root2 }}</p>
+        {% endif %}
+        <a href="{% url 'quadratic_form' %}">🔄 Solve Another</a>
+    </div>
+</body>
+</html>

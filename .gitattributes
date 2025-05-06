@@ -1,2 +1,5 @@
-*.iml linguist-generated=false
-*.xml linguist-generated=false
+#*.iml linguist-generated=false
+#*.xml linguist-generated=false
+
+.idea/*.xml linguist-generated=false
+.idea/*.iml linguist-generated=false
